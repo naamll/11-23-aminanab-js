@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="./public/js/modal.js" defer></script>
-  <link rel="stylesheet" href="./public/css/style.css">
+  <link rel="stylesheet" href="./css/style.css">
   <title>DOM</title>
 </head>
 
@@ -41,55 +41,64 @@
   </div>
   <script>
     
-    const modal = document.getElementById('myModal');
-        const openModalButton = document.getElementById('openModal');
-        const closeModalButton = modal.querySelector('.close');
+     // Находим контейнер с классом .counter
+     const counter = document.querySelector('.counter');
 
-        // Открытие модального окна
-        function openModal() {
-            modal.classList.add('open');
-        }
+// Функция для изменения текста внутри элемента-счётчика
+function changeCounter(type) {
+  if (counter.innerHTML === 0 || counter) {
+    if (type === 'plus') {
+      // Изменяем HTML внутри элемента (в данном случае лишь текст)
+      counter.innerHTML++;
+    } else if (type === 'minus') {
+      counter.innerHTML--;
+    } else if (type === 'reset') {
+      counter.innerHTML = 0;
+    }
+  }
+}
 
-        // Закрытие модального окна
-        function closeModal() {
-            modal.classList.remove('open');
-        }
+// // Находим элемент с id #resetBtn
+// const resetButton = document.querySelector('#resetBtn');
 
-        openModalButton.addEventListener('click', openModal);
-        closeModalButton.addEventListener('click', closeModal);
+// // Пишем обработчик событий (если навестись курсором на элемент)
+// resetButton.addEventListener('mouseenter', () => {
+//   // Изменяем стиль элемента (ширину)
+//   resetButton.style.width = '100rem';
+//   console.log('Размер элемента увеличился');
+// });
 
-        // Закрытие модального окна при клике вне его
-        window.addEventListener('click', (event) => {
-            if (event.target === modal) {
-                closeModal();
-            }
-        });
+// // Пишем обработчик событий (если убрать курсор от элемента)
+// resetButton.onmouseleave = () => {
+//   // Изменяем стиль элемента (ширину)
+//   resetButton.style.width = 'auto';
+// }
 
-        // Счетчик
-        const counter = document.querySelector('.counter');
+// Находим контейнер с классом .wrapper
+const wrapper = document.querySelector('.wrapper');
 
-        function changeCounter(type) {
-            if (counter.innerHTML === '0' || counter) {
-                if (type === 'plus') {
-                    counter.innerHTML++;
-                } else if (type === 'minus') {
-                    counter.innerHTML--;
-                } else if (type === 'reset') {
-                    counter.innerHTML = 0;
-                }
-            }
-        }
+function createHeadline() {
+  // Создаём заголовок
+  const headline = document.createElement('h1');
 
-        const resetButton = document.querySelector('#resetBtn');
+  // Добавляем текст новому элементу
+  headline.innerHTML = 'Hello world!!!';
+  // Добавляем класс новому элементу
+  headline.classList.add('red');
 
-        resetButton.addEventListener('mouseenter', () => {
-            resetButton.style.width = '100rem';
-            console.log('Размер элемента увеличился');
-        });
+  // Вставляем элемент контейнер
+  wrapper.append(headline);
+}
 
-        resetButton.onmouseleave = () => {
-            resetButton.style.width = 'auto';
-        }
+  function removeHeadlines() {
+      const wrapper = document.querySelector('.wrapper');
+      // Удаляем все дочерние элементы из .wrapper
+      while (wrapper.firstChild) {
+        wrapper.removeChild(wrapper.firstChild);
+      }
+    }
+
+
 
 </script>
   </script>
