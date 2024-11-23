@@ -1,0 +1,44 @@
+button,
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  background: palevioletred;
+  border: 1px solid palevioletred;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  transition: 0.3s ease-in;
+}
+
+button,
+button span,
+button p,
+.button,
+.button span,
+.button p {
+  color: #fff;
+  font-weight: 500;
+}
+
+button:hover,
+.button:hover {
+  background: palevioletred;
+  border: 1px solid black;
+
+}
+
+.danger {
+  background: black;
+  border: 1px solid black;
+}
+
+.danger:hover {
+  background: pink;
+  border: 1px solid black;
+}
+
+.outline {
+  background: none;
+}
