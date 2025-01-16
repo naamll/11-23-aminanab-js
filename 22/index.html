@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./main.js" defer></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Mango</title>
+    
+</head>
+<body>
+    
+    <body>
+        <header class="header">
+            <div class="logo">Mango</div>
+            <div class="burger" id="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <nav class="menu" id="menu">
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+        
+            <script src="script.js"></script>
+        </header>
+    
+        <section class="banner">
+            
+                <div class="slide active">
+                    <img src="https://www.angstrem-mebel.ru/upload/iblock/6ff/6ff774a50ebda4a93eae7bbd0c7ac398.jpg" alt="Акционный товар 1" style="width: 1500px; height: 1000px; ">
+               
+        </section>
+    
+        <section class="catalog">
+            <h2>Каталог</h2>
+            <div class="product">
+            <div class="product-card">
+                <img src="https://i.pinimg.com/236x/ee/1e/55/ee1e5522f7a1a72f51b02051cb064834.jpg" alt="Кресло">
+                <h3>Кресло</h3>
+                <p>Цена: 1000₽</p>
+                <button>В корзину</button>
+            </div>
+            <div class="product-card">
+                <img src="https://i.pinimg.com/236x/e8/97/9f/e8979fb9e1a496011514682c302e662b.jpg" alt="Товар 2">
+                <h3>Туалетный стол</h3>
+                <p>Цена: 2000₽</p>
+                <button>В корзину</button>
+            </div>
+            <div class="product-card">
+                <img src="https://i.pinimg.com/236x/2e/bd/c4/2ebdc40a89cc2079bddbd8a6e1d78b9a.jpg" alt="Товар 3">
+                <h3>Шкаф книжный</h3>
+                <p>Цена: 1500₽</p>
+                <button>В корзину</button>
+            </div>
+            <div class="product-card">
+                <img src="https://i.pinimg.com/236x/30/e5/99/30e5991bd41b5464fa55ac7144be783a.jpg" alt="Товар 4">
+                <h3>Шкаф</h3>
+                <p>Цена: 2500₽</p>
+                <button>В корзину</button>
+            </div>
+        </div>
+        </section>
+    
+        <section class="about">
+            <h2>О нас</h2>
+            
+            <img src="https://avatars.mds.yandex.net/i?id=9ee2a42d954553d010efd37db8f55182_l-8191765-images-thumbs&n=13" alt="О нас" />
+            <p>Мы предлагаем широкий ассортимент мебели для вашего дома. Наши товары отличаются высоким качеством и современным дизайном.</p>
+        </section>
+    
+        <section class="faq">
+            <h2>Ответы на вопросы</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAnswer(this)">Вопрос 1</div>
+                    <div class="accordion-body">Ответ на вопрос 1.</div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAnswer(this)">Вопрос 2</div>
+                    <div class="accordion-body">Ответ на вопрос 2.</div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAnswer(this)">Вопрос 3</div>
+                    <div class="accordion-body">Ответ на вопрос 3.</div>
+                </div>
+            </div>
+        </section>
+    
+        <footer class="footer">
+            <div class="footer-logo">Mango</div>
+            <div class="contacts">
+                <span>Контакты: +7 (123) 456-78-90</span>
+                <button onclick="showModal()">📞</button>
+            </div>
+        </footer>
+    
+        <div class="modal" id="phoneModal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">×</span>
+                <p>Номер телефона: +7 (123) 456-78-90</p>
+                <button onclick="makeCall()">Позвонить</button>
+            </div>
+        </div>
+    
+        <script src="script.js"></script>
+    </body>
+    </html>
+    
